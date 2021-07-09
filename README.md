@@ -1,6 +1,9 @@
 ## 简介
 `prevent-repeat-click` 是一个按钮防重复点击的一个小工具。
-
+## 安装
+```js
+npm install prevent-repeat-click --save
+```
 ## 使用
 ```js
 import preventRepeatClick from 'prevent-repeat-click'
