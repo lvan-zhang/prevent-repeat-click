@@ -1,3 +1,4 @@
+# [prevent-repeat-click.js][https://blog.csdn.net/weixin_43972437/article/details/118611174]  [![NPM Version][npm-image]][npm-url]  [![NPM Downloads][downloads-image]][downloads-url]  [![Build Status][travis-image]][travis-url]
 ## 简介
 `prevent-repeat-click` 是一个按钮防重复点击的一个小工具。
 ## 安装
@@ -5,11 +6,20 @@
 npm install prevent-repeat-click --save
 ```
 ## 使用
+可以在任何 js 环境使用
+### js
 ```js
-import preventRepeatClick from 'prevent-repeat-click'
+import preventRepeatClick from '../index.js'
+function submit() {
+  console.log('提交成功')
+}
+document.getElementById('button').onclick = () => {
+  preventRepeatClick(submit)
+}
 ```
 ### VUE
 ```js
+import preventRepeatClick from 'prevent-repeat-click'
 // main.js
 Vue.prototype.$preventRepeatClick = preventRepeatClick
 ```
@@ -22,3 +32,23 @@ methods: {
   }
 }
 ```
+### REACT
+参考上面 js
+
+## 参数说明
+```
+preventRepeatClick(method_name, [delay], [params])
+```
+| 参数名      | 说明                     | 是否必填 | 类型   | 默认值 |
+| ----------- | ------------------------ | -------- | ------ | ------ |
+| method_name | 需要执行的函数名         | 是       | String | -      |
+| delay       | 多少毫秒后可以下一次点击 | 否       | Number | 500    |
+| params      | 给函数传递的参数         | 否       | any    | -      |
+## 测试
+```js
+http-server
+```
+访问：
+http://192.168.2.71:8081/test/index
+
+可以看到双击提交按钮，只会触发一次‘提交成功’
