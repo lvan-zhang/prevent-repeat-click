@@ -1,0 +1,53 @@
+{
+    "terminal.integrated.fontSize": 13,
+    "editor.fontSize": 16,
+    "breadcrumbs.enabled": false,
+    "editor.tabSize": 2,
+    "window.zoomLevel": 0,
+    "css.lint.zeroUnits": "warning",
+    "css.lint.duplicateProperties": "warning",
+    "eslint.alwaysShowStatus": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "vue"
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "typescript.validate.enable": false,
+    "javascript.validate.enable": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "liveServer.settings.fullReload": true,
+    "liveServer.settings.host": "localhost",
+    "editor.suggestSelection": "first",
+    "gitlens.views.repositories.files.layout": "tree",
+    "todo-tree.tree.showScanModeButton": false,
+    "eslint.format.enable": true,
+    // 保存时应用eslint
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.fixAll.stylelint": true
+    },
+    "eslint.run": "onSave",
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "workbench.sideBar.location": "left",
+    "workbench.colorTheme": "Atom One Dark",
+    "git.enableSmartCommit": true,
+    "path-intellisense.mappings": {
+        "@": "${workspaceRoot}/src"
+    },
+    "emmet.syntaxProfiles": {
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "emmet.includeLanguages": {
+        "wxml": "html"
+    },
+    "editor.formatOnSave": true,
+    "[vue]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    }
+}
