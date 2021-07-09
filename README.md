@@ -1,4 +1,4 @@
-# [prevent-repeat-click.js][https://blog.csdn.net/weixin_43972437/article/details/118611174]  [![NPM Version][npm-image]][npm-url]  [![NPM Downloads][downloads-image]][downloads-url]  [![Build Status][travis-image]][travis-url]
+# [prevent-repeat-click.js][github-url]  [![NPM Version][npm-image]][npm-url]
 ## 简介
 `prevent-repeat-click` 是一个按钮防重复点击的一个小工具。
 ## 安装
@@ -49,6 +49,11 @@ preventRepeatClick(method_name, [delay], [params])
 http-server
 ```
 访问：
-http://192.168.2.71:8081/test/index
+http://localhost:8081/test/index
 
 可以看到双击提交按钮，只会触发一次‘提交成功’
+
+[github-url]: https://github.com/lvan-zhang/prevent-repeat-click
+
+[npm-image]: https://img.shields.io/npm/v/prevent-repeat-click.svg
+[npm-url]: https://www.npmjs.com/package/prevent-repeat-click
