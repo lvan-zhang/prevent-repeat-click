@@ -10,16 +10,29 @@
 
 <body>
   <div id="app">
-    <button id="button">提交</button>
+    <button id="button-sync">同步任务防重复测试</button>
+    <button id="button-async">异步任务防重复测试</button>
+    <p>快速点击按钮查看控制台的打印情况</p>
   </div>
 </body>
 <script type="module">
-  import preventRepeatClick from '../index.js'
-  function submit() {
-    console.log('提交成功')
+  import { syncPreventRepeatClick, asyncPreventRepeatClick } from '../index.js'
+  function syncSubmit() {
+    console.log('同步提交成功')
   }
-  document.getElementById('button').onclick = () => {
-    preventRepeatClick(submit)
+  function asyncSubmit() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log('异步提交成功')
+        resolve()
+      }, 3000)
+    })
+  }
+  document.getElementById('button-sync').onclick = () => {
+    syncPreventRepeatClick(syncSubmit)
+  }
+  document.getElementById('button-async').onclick = () => {
+    asyncPreventRepeatClick(asyncSubmit)
   }
 </script>
 
